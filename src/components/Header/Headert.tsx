@@ -12,7 +12,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <ul>
+    <ul className="header-ul">
       <li>
         {isAuth ? (
           <img src={userInfo.profileImg} className="profile-img" />

@@ -2,7 +2,7 @@ import "./FooterStyle.scss";
 
 const Footer = () => {
   return (
-    <ul>
+    <ul className="footer-ul">
       <li>
         <span className="footer-logo">Ablind</span>| 서울특별시 동작구 사당로 50
         숭실대학교 창신관

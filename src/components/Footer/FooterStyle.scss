@@ -1,27 +1,30 @@
 $logo: #000000;
 $gray: #434343;
 
-ul {
+.footer-ul {
+  width: 100%;
   list-style-type: none;
+  margin: 0px;
+  padding: 0px 25px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   gap: 5px;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: #434343;
+    gap: 7px;
+    font-size: 12px;
+  }
 }
 
 .footer-logo {
   font-size: 20px;
   color: $logo;
   font-family: "Pattaya", sans-serif;
-}
-
-li {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  color: #434343;
-  gap: 7px;
-  font-size: 12px;
 }
