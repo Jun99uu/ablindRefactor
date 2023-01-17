@@ -1,16 +1,17 @@
 //common component -> content-wrapper의 스타일
 .content-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 20px;
-  padding: 0px 25px;
 }
 
 .content-title {
+  width: 100%;
   white-space: pre-line;
   font-size: 16px;
   font-weight: 600;
   color: #0a0a0a;
   text-align: start;
+  padding: 0px 25px;
 }
