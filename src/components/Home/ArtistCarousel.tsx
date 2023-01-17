@@ -16,14 +16,16 @@ const ArtistCarousel: React.FC<PropType> = (props) => {
       <div className="artist__container">
         {slides.map((slide) => (
           <div className="artist__slide" key={slide.artistId}>
-            <img src={slide.profile} />
-            <ul>
-              <li>
-                <span>{slide.intro}</span>
-                <span>{slide.name}</span>
-              </li>
-              <li>자세히보기</li>
-            </ul>
+            <div className="box">
+              <img src={slide.profile} />
+              <ul>
+                <li>
+                  <span className="intro">{slide.intro}</span>
+                  <span className="name">{slide.name}</span>
+                </li>
+                <li className="link">자세히보기</li>
+              </ul>
+            </div>
           </div>
         ))}
       </div>
