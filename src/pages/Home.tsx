@@ -1,6 +1,8 @@
 //index(홈) 페이지를 감싸는 컴포넌트이다.
 import CarouselWrapper from "../components/Carousel/CarouselWrapper";
+import HomeContentWrapper from "../components/Home/HomeContentWrapper";
 import { CarouselItem } from "../interfaces/CarouselItem";
+import "../styles/pageStyle.scss";
 
 const Home = () => {
   const slides: Array<CarouselItem> = [
@@ -18,8 +20,9 @@ const Home = () => {
     },
   ];
   return (
-    <div>
+    <div className="home-container">
       <CarouselWrapper items={slides} />
+      <HomeContentWrapper />
     </div>
   );
 };
