@@ -17,10 +17,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
-              <img className="embla__slide__img" src={slide.image} />
+              <img className="embla__slide__img" src={slide.img} />
               <span
                 className="embla__slide__link"
-                onClick={() => window.open(`${slide.link}`)}
+                onClick={() => window.open(`${slide.url}`)}
               >
                 자세히보기
               </span>

@@ -3,6 +3,7 @@ import "./HomeStyle.scss";
 import ButtonList from "./ButtonList";
 import ArtistContent from "./ArtistContent";
 import ShopContent from "./ShopContent";
+import NewsContent from "./NewsContent";
 
 const HomeContentWrapper = () => {
   return (
@@ -10,6 +11,7 @@ const HomeContentWrapper = () => {
       <ButtonList />
       <ArtistContent />
       <ShopContent />
+      <NewsContent />
     </div>
   );
 };
