@@ -1,0 +1,50 @@
+$black: #0a0a0a;
+$text-black: #1b1b1b;
+$gray: #646464;
+
+.register-wrapper {
+  width: 100%;
+  padding: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+
+  & > .title-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    & > .title {
+      color: $black;
+      font-size: 20px;
+      font-weight: 700;
+
+      & > .register-logo {
+        font-family: "Pattaya", sans-serif;
+        font-size: 28px;
+      }
+    }
+
+    & > .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      color: $gray;
+      white-space: pre-line;
+      line-height: 20px;
+    }
+  }
+
+  & > .btn-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+}

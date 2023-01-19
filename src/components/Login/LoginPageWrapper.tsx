@@ -1,10 +1,12 @@
 import Button from "../Common/Button";
 import "./LoginPageStyle.scss";
 import useInput from "../../hooks/useInput";
+import { useNavigate } from "react-router-dom";
 
 const LoginPageWrapper = () => {
   const [id, setId] = useInput("");
   const [pwd, setPwd] = useInput("");
+  const navigate = useNavigate();
 
   return (
     <div className="login-page-wrapper">
@@ -36,7 +38,7 @@ const LoginPageWrapper = () => {
         <Button title={`로그인`} handler={() => console.log(id, pwd)} />
         <Button
           title={`가입하고 특별한 예술가 만나보기!`}
-          handler={() => null}
+          handler={() => navigate("/register")}
         />
       </div>
     </div>
