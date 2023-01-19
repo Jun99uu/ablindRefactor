@@ -1,0 +1,27 @@
+.news-box {
+  width: calc(100% - 50px);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  color: #646464;
+  padding: 0px 15px;
+  gap: 5px;
+
+  & > span:nth-child(1) {
+    font-size: 14px;
+    text-align: start;
+    font-weight: 400;
+  }
+
+  & > span:nth-child(2) {
+    font-size: 12px;
+    text-align: start;
+    font-weight: 200;
+    cursor: pointer;
+  }
+}

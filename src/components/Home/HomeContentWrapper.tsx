@@ -2,12 +2,16 @@
 import "./HomeStyle.scss";
 import ButtonList from "./ButtonList";
 import ArtistContent from "./ArtistContent";
+import ShopContent from "./ShopContent";
+import NewsContent from "./NewsContent";
 
 const HomeContentWrapper = () => {
   return (
     <div className="home-wrapper-container">
       <ButtonList />
       <ArtistContent />
+      <ShopContent />
+      <NewsContent />
     </div>
   );
 };
