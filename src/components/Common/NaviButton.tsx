@@ -11,8 +11,16 @@ interface buttonProps {
 
 const NaviButton = (props: buttonProps) => {
   const navigate = useNavigate();
+
+  const moveToPage = () => {
+    if (props.url.substring(0, 4) === "http") {
+      window.open(props.url);
+    } else {
+      navigate(`/${props.url}`);
+    }
+  };
   return (
-    <button onClick={() => navigate(`/${props.url}`)} className="navi-button">
+    <button onClick={() => moveToPage()} className="navi-button">
       <span className="plus-icon">
         <FontAwesomeIcon icon={faPlusCircle} />
       </span>
