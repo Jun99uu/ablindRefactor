@@ -1,4 +1,7 @@
 export interface CarouselItem {
-  img: string;
-  url: string;
+  content: string;
+  deleteImage: string;
+  id: number;
+  image: string;
+  link: string;
 }

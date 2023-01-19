@@ -7,16 +7,25 @@ import "../styles/pageStyle.scss";
 const Home = () => {
   const slides: Array<CarouselItem> = [
     {
-      img: "https://horosocular.s3.ap-northeast-1.amazonaws.com/slide1.png",
-      url: "https://www.naver.com/",
+      content: "에이블라인드 아카펠라 소모임, 유니즌 완료",
+      deleteImage: "",
+      id: 0,
+      image: "https://horosocular.s3.ap-northeast-1.amazonaws.com/slide1.png",
+      link: "https://www.naver.com/",
     },
     {
-      img: "https://horosocular.s3.ap-northeast-1.amazonaws.com/slide2.png",
-      url: "https://www.naver.com/",
+      content: "에이블라인드 아카펠라 소모임, 유니즌 완료",
+      deleteImage: "",
+      id: 1,
+      image: "https://horosocular.s3.ap-northeast-1.amazonaws.com/slide2.png",
+      link: "https://www.naver.com/",
     },
     {
-      img: "https://horosocular.s3.ap-northeast-1.amazonaws.com/slide3.png",
-      url: "https://www.naver.com/",
+      content: "에이블라인드 아카펠라 소모임, 유니즌 완료",
+      deleteImage: "",
+      id: 2,
+      image: "https://horosocular.s3.ap-northeast-1.amazonaws.com/slide3.png",
+      link: "https://www.naver.com/",
     },
   ];
   return (
