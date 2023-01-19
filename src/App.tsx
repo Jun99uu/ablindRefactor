@@ -60,7 +60,7 @@ function App() {
         <Route
           path="/login"
           element={
-            <DetailPageWrapper>
+            <DetailPageWrapper title={`로그인`}>
               <Login />
             </DetailPageWrapper>
           }
@@ -68,7 +68,7 @@ function App() {
         <Route
           path="/register"
           element={
-            <DetailPageWrapper>
+            <DetailPageWrapper title={`회원가입`}>
               <Register />
             </DetailPageWrapper>
           }
@@ -76,7 +76,7 @@ function App() {
         <Route
           path="/Cart"
           element={
-            <DetailPageWrapper>
+            <DetailPageWrapper title={`장바구니`}>
               <Cart />
             </DetailPageWrapper>
           }
@@ -84,7 +84,7 @@ function App() {
         <Route
           path="/Order"
           element={
-            <DetailPageWrapper>
+            <DetailPageWrapper title={`주문관리`}>
               <Order />
             </DetailPageWrapper>
           }
