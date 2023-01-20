@@ -125,7 +125,16 @@ const BaseInfoForm = (props: {
   }, [input, err.idErr, err.pwdErr]);
 
   useEffect(() => {
-    if (err.allErr === AllErr.Pass) completed(true);
+    if (err.allErr === AllErr.Pass) {
+      setInfo({
+        ...info,
+        name: input.name,
+        email: input.id,
+        pass: input.pwd,
+        phoneNumber: input.number,
+      });
+      completed(true);
+    }
   }, [err.allErr]);
 
   return (
