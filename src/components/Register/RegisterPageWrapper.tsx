@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Common/Button";
+import BaseInfoForm from "./BaseInfo/BaseInfoForm";
 import "./RegisterPageStyle.scss";
 
 enum Stage {
@@ -11,14 +12,16 @@ enum Stage {
 
 const RegisterPageWrapper = () => {
   const [stage, setStage] = useState(Stage.First);
+  const [firstCompleted, setFirstCompleted] = useState(false);
+  const [secondCompleted, setSecondCompleted] = useState(false);
   const navigate = useNavigate();
 
   const nextStage = () => {
-    stage === Stage.First
+    stage === Stage.First && firstCompleted
       ? setStage(Stage.Second)
-      : stage === Stage.Second
+      : stage === Stage.Second && secondCompleted
       ? setStage(Stage.Third)
-      : setStage(Stage.Third);
+      : setStage((prev) => prev);
   };
 
   return (
@@ -37,7 +40,13 @@ const RegisterPageWrapper = () => {
         </span>
         <span className="subtitle">{stage}</span>
       </div>
-      <form></form>
+      {stage === Stage.First ? (
+        <BaseInfoForm completed={setFirstCompleted} />
+      ) : stage === Stage.Second ? (
+        <></>
+      ) : (
+        <></>
+      )}
       <div className="btn-box">
         {stage === Stage.Third ? (
           <></>

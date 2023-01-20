@@ -1,0 +1,92 @@
+$black: #1b1b1b;
+
+.register-form-layout {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0px;
+  padding: 0px;
+
+  & > li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    & > label {
+      font-size: 14px;
+      font-weight: 700;
+      color: $black;
+    }
+
+    & > input {
+      font-size: 16px;
+      color: $black;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #d9d9d9;
+      padding: 5px;
+    }
+
+    & > input::placeholder {
+      font-family: "SUIT Variable", sans-serif;
+      font-size: 14px;
+      color: #afafaf;
+    }
+
+    & > .err,
+    & > .pass {
+      align-self: flex-end;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    & > .err {
+      color: #ff6584;
+    }
+
+    & > .pass {
+      color: #46a174;
+    }
+
+    & > .id-input {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      gap: 10px;
+      align-items: center;
+
+      & > input {
+        font-size: 16px;
+        color: $black;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 5px;
+      }
+
+      & > input::placeholder {
+        font-family: "SUIT Variable", sans-serif;
+        font-size: 14px;
+        color: #afafaf;
+      }
+
+      & > button {
+        width: 100%;
+        height: 120%;
+        border: none;
+        background-color: #f3f3f3;
+        color: #646464;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+}
