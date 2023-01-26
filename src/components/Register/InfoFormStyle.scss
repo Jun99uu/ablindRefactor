@@ -10,7 +10,7 @@ $black: #1b1b1b;
   margin: 0px;
   padding: 0px;
 
-  & > li {
+  & > li:not(.check-line) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -31,6 +31,8 @@ $black: #1b1b1b;
       border: none;
       border-bottom: 1px solid #d9d9d9;
       padding: 5px;
+      position: relative;
+      font-family: "SUIT Variable", sans-serif;
     }
 
     & > input::placeholder {
@@ -69,6 +71,7 @@ $black: #1b1b1b;
         border: none;
         border-bottom: 1px solid #d9d9d9;
         padding: 5px;
+        font-family: "SUIT Variable", sans-serif;
       }
 
       & > input::placeholder {
@@ -88,5 +91,75 @@ $black: #1b1b1b;
         font-weight: 700;
       }
     }
+
+    & > .account-input {
+      width: 100%;
+      position: relative;
+
+      & > input {
+        font-size: 16px;
+        color: $black;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 5px;
+        position: relative;
+        font-family: "SUIT Variable", sans-serif;
+      }
+
+      & > input::placeholder {
+        font-family: "SUIT Variable", sans-serif;
+        font-size: 14px;
+        color: #afafaf;
+      }
+    }
+  }
+
+  & > .check-ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    & > .check-line {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2px;
+      color: #818181;
+      font-size: 13px;
+      font-weight: 400;
+      accent-color: #f3f3f3;
+
+      & > label {
+        & > span {
+          border-bottom: 1px solid #646464;
+          padding-bottom: 0.5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  & > .err,
+  & > .pass {
+    align-self: flex-end;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  & > .err {
+    color: #ff6584;
+  }
+
+  & > .pass {
+    color: #46a174;
   }
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Common/Button";
+import AddInfoForm from "./AdditionalInfo/AddInfoForm";
 import BaseInfoForm from "./BaseInfo/BaseInfoForm";
 import "./RegisterPageStyle.scss";
 
@@ -43,7 +44,7 @@ const RegisterPageWrapper = () => {
       {stage === Stage.First ? (
         <BaseInfoForm completed={setFirstCompleted} />
       ) : stage === Stage.Second ? (
-        <></>
+        <AddInfoForm completed={setSecondCompleted} />
       ) : (
         <></>
       )}

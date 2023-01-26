@@ -3,7 +3,7 @@
 import { useState, useEffect, SetStateAction, Dispatch } from "react";
 import { useRecoilState } from "recoil";
 import { registerInfoState } from "../../../states/auth/registerState";
-import "./BaseInfoFormStyle.scss";
+import "../InfoFormStyle.scss";
 
 enum PwdErr {
   Default = "",
@@ -72,9 +72,10 @@ const BaseInfoForm = (props: {
 
     if (name === "pwdc") {
       //패스워드 확인일 때
-      input.pwd === value
-        ? setErr({ ...err, pwdErr: PwdErr.Pass })
-        : setErr({ ...err, pwdErr: PwdErr.SameFault });
+      if (input.pwd !== value) setErr({ ...err, pwdErr: PwdErr.SameFault });
+      else if (input.pwd === value && pwdReg.test(input.pwd))
+        setErr({ ...err, pwdErr: PwdErr.Pass });
+
       return value;
     }
 
