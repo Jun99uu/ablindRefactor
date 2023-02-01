@@ -13,6 +13,26 @@ export interface GoodsType {
   price: number;
 }
 
+interface GoodsImg {
+  url: string;
+  id: number;
+}
+
+interface Option {
+  id: number;
+  itemOption: string;
+}
+
+interface goodsDetail {
+  itemId: number;
+  detailImg: string;
+  images: Array<GoodsImg>;
+  author: string;
+  name: string;
+  options: Array<Option>;
+  price: number;
+}
+
 export const dummy: Array<GoodsType> = [
   {
     itemId: 0,
@@ -258,3 +278,39 @@ export const dummy2: Array<GoodsType> = [
     price: 35000,
   },
 ];
+
+export const dummyGoods: goodsDetail = {
+  itemId: 1,
+  images: [
+    {
+      url: "https://i.pinimg.com/564x/3f/8b/1d/3f8b1dcfe38167356303edec2c6ddb00.jpg",
+      id: 1,
+    },
+    {
+      url: "https://i.pinimg.com/564x/c9/76/13/c97613aa91f4b01130ccf7c7691dcbb6.jpg",
+      id: 2,
+    },
+    {
+      url: "https://i.pinimg.com/564x/40/ab/85/40ab8583cea14941f7dba5f85d7ec9c0.jpg",
+      id: 3,
+    },
+    {
+      url: "https://i.pinimg.com/564x/8b/e9/34/8be93400673ea316e5041c90d63433d3.jpg",
+      id: 4,
+    },
+    {
+      url: "https://i.pinimg.com/564x/3a/ca/8f/3aca8fd1dd1ae01f7e8aec08254e06e2.jpg",
+      id: 5,
+    },
+  ],
+  name: "다채로운 분위기의 엽서 5종 세트 (★이벤트 5+1★)",
+  author: "강슬기",
+  price: 5000,
+  options: [
+    { id: 0, itemOption: "오색 꽃 그림 엽서 5장" },
+    { id: 1, itemOption: "우주의 별빛 엽서 5장" },
+    { id: 2, itemOption: "따뜻한 색감의 엽서 5장" },
+    { id: 3, itemOption: "랜덤엽서 5+1장 " },
+  ],
+  detailImg: "https://conversekorea.cafe24.com/converse/HO21/M9160C.jpg",
+};
