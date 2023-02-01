@@ -9,13 +9,14 @@ const ItemBox = () => {
   const [items, setItems] = useState<Array<Array<GoodsType>>>([]);
 
   const divideItems = () => {
+    const copied = JSON.parse(JSON.stringify(dummy2));
     const divide =
-      Math.floor(dummy2.length / 8) +
-      (Math.floor(dummy2.length % 8) > 0 ? 1 : 0);
+      Math.floor(copied.length / 8) +
+      (Math.floor(copied.length % 8) > 0 ? 1 : 0);
     const newArray = [];
 
     for (let i = 0; i < divide; i++) {
-      newArray.push(dummy2.splice(0, 8));
+      newArray.push(copied.splice(0, 8));
     }
     setItems(newArray);
   };
