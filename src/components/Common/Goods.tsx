@@ -23,7 +23,7 @@ const Goods = (props: goodsProps) => {
         <li>{name}</li>
         <li>{convertWon(`${item.price}`)}원</li>
       </ul>
-      <span className={`deco-circle deco-circle-${index + 1}`} />
+      <span className={`deco-circle deco-circle-${(index + 1) % 4}`} />
     </div>
   );
 };
