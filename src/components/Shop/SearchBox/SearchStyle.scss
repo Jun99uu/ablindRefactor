@@ -1,0 +1,44 @@
+$black: #0a0a0a;
+$text-black: #1b1b1b;
+
+.search-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-input {
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  & > input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-family: "SUIT Variable", sans-serif;
+    font-weight: 600;
+    color: $text-black;
+  }
+
+  & > input::placeholder {
+    color: #afafaf;
+    font-family: "SUIT Variable", sans-serif;
+  }
+
+  & > span {
+    cursor: pointer;
+    color: #afafaf;
+  }
+}

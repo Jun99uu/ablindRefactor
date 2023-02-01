@@ -4,6 +4,7 @@ import { useState } from "react";
 import ShopPageWrapper from "../components/Shop/ShopPageWrapper";
 import { Banner } from "../interfaces/Shop";
 import { CarouselItem } from "../interfaces/CarouselItem";
+import "../styles/pageStyle.scss";
 
 const Shop = () => {
   const [slides, setSlides] = useState<Array<CarouselItem>>(
