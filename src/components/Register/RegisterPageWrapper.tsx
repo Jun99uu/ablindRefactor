@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../Common/Button";
 import AddInfoForm from "./AdditionalInfo/AddInfoForm";
 import BaseInfoForm from "./BaseInfo/BaseInfoForm";
+import CompleteRegister from "./CompleteRegister";
 import "./RegisterPageStyle.scss";
 
 enum Stage {
@@ -46,7 +47,7 @@ const RegisterPageWrapper = () => {
       ) : stage === Stage.Second ? (
         <AddInfoForm completed={setSecondCompleted} />
       ) : (
-        <></>
+        <CompleteRegister />
       )}
       <div className="btn-box">
         {stage === Stage.Third ? (
