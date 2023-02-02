@@ -18,12 +18,12 @@ interface GoodsImg {
   id: number;
 }
 
-interface Option {
+export interface Option {
   id: number;
   itemOption: string;
 }
 
-interface goodsDetail {
+export interface goodsDetail {
   itemId: number;
   detailImg: string;
   images: Array<GoodsImg>;

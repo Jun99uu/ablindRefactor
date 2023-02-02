@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CarouselItem } from "../interfaces/CarouselItem";
 import { dummyGoods } from "../interfaces/Goods";
 import "../styles/pageStyle.scss";
+import GoodsPageWrapper from "../components/Goods/GoodsPageWrapper";
 
 const GoodsDetail = () => {
   const [slides, setSlides] = useState<Array<CarouselItem>>(
@@ -14,6 +15,7 @@ const GoodsDetail = () => {
   return (
     <div className="goods-container">
       <CarouselWrapper items={slides} />
+      <GoodsPageWrapper item={dummyGoods} />
     </div>
   );
 };
