@@ -12,6 +12,10 @@
     white-space: pre-line;
     font-size: 17px;
   }
+
+  & > .goods__price {
+    align-self: flex-end;
+  }
 }
 
 .artist__profile {

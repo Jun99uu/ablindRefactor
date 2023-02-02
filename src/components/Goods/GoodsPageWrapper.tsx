@@ -6,7 +6,7 @@ const GoodsPageWrapper = (props: { item: goodsDetail }) => {
   const { item } = props;
   return (
     <div className="goods-page-wrapper">
-      <TitleBox artist={item.author} title={item.name} />
+      <TitleBox artist={item.author} title={item.name} price={item.price} />
     </div>
   );
 };
