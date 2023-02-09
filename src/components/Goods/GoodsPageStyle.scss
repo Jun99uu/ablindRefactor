@@ -38,3 +38,66 @@ $black: #1b1b1b;
   width: 100%;
   height: auto;
 }
+
+.review__wrapper {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0px;
+  padding: 0px;
+  gap: 20px;
+}
+
+.reivew__box {
+  width: 100%;
+  align-self: center;
+  min-height: 130px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  & > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    gap: 3px;
+    cursor: pointer;
+  }
+
+  & > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+.review__box--name {
+  font-size: 14px;
+  font-weight: 700;
+  color: $black;
+}
+
+.review__box--date {
+  font-size: 12px;
+  font-weight: 400;
+  color: $black;
+}
+
+.review__content {
+  margin-top: 7px;
+  font-size: 15px;
+  font-weight: 400;
+  color: $black;
+  white-space: pre-line;
+}
