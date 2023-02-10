@@ -1,6 +1,8 @@
-//문자열이 특정 길이를 넘어가면 자르고 (…)를 붙여 반환하는 hook
 import { useState, useCallback, useEffect } from "react";
 
+/**
+ * 문자열이 특정 길이를 넘어가면 자르고 (…)를 붙여 반환하는 hook
+ */
 const useCutter = (value: string, length: number) => {
   const [str, setStr] = useState(value);
 
