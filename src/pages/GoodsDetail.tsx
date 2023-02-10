@@ -5,6 +5,7 @@ import { CarouselItem } from "../interfaces/CarouselItem";
 import { dummyGoods } from "../interfaces/Goods";
 import "../styles/pageStyle.scss";
 import GoodsPageWrapper from "../components/Goods/GoodsPageWrapper";
+import MoveTopButton from "../components/Common/MoveTopButton";
 
 const GoodsDetail = () => {
   const [slides, setSlides] = useState<Array<CarouselItem>>(
@@ -16,6 +17,7 @@ const GoodsDetail = () => {
     <div className="goods-container">
       <CarouselWrapper items={slides} />
       <GoodsPageWrapper item={dummyGoods} />
+      <MoveTopButton />
     </div>
   );
 };
